@@ -1,11 +1,6 @@
 cmake_minimum_required(VERSION 3.5.1)
 
 function(require_cxx_version target version)
-    #if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
-    #    target_compile_options(${target} PRIVATE "/std:c++${version}")
-    #else()
-    #    set_property(TARGET ${target} PROPERTY CXX_STANDARD ${version})
-    #endif()
     set_property(TARGET ${target} PROPERTY CXX_STANDARD ${version})
     set_property(TARGET ${target} PROPERTY CXX_STANDARD_REQUIRED ON)
 endfunction()
